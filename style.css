@@ -1,0 +1,84 @@
+html,
+body {
+  /* display: block; */
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+  font-family: 'Lato';
+}
+
+canvas {
+  display: block;
+}
+
+
+
+lottie-player {
+  margin: 0 auto;
+  width: 500px;
+  height: 500px;
+}
+
+input {
+  /* display: inline-block; */
+  padding-bottom: 0px;
+  width: 200px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-bottom: 2px solid white;
+  /* height: 3em; */
+  font-size: 2em;
+  height: auto
+}
+
+input:focus {
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+
+
+.ipt {
+
+  animation: 5s fadeIn;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  visibility: hidden;
+}
+
+#ipt-button {
+  padding: 4px 8px;
+  animation: 5s fadeIn;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+
+  background-color: transparent;
+  border: 2px solid black;
+  transition: all 0.5s;
+
+}
+
+#ipt-button:hover {
+  border: 2px solid white;
+
+}
+
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
