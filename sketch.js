@@ -78,10 +78,16 @@ const IDSent = async (message) => {
             eventWhen.innerHTML = myJson["when"]
             eventLocation.innerHTML = myJson["location"]
             eventRSVP.innerHTML = myJson["RSVP"]
+            dressCode = document.createElement("h3");
+            dressCode.innerHTML = myJson["dress"]
+
             document.querySelector("#player-details").appendChild(eventWhen)
             document.querySelector("#player-details").appendChild(eventLocation)
             document.querySelector("#player-details").appendChild(eventTime)
+            document.querySelector("#player-details").appendChild(dressCode)
+
             document.querySelector("#player-details").appendChild(eventRSVP)
+
 
             if (myJson["status"] == "none") {} else {
                 eventStatus = document.createElement("h3")

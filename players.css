@@ -1,0 +1,37 @@
+body {
+    /* display: block; */
+    margin: 0;
+    padding-left: 4em;
+    padding-right: 4em;
+    background-color: black;
+    text-align: left;
+    justify-content: center;
+    margin: auto;
+    font-family: 'Lato';
+    color: white;
+  }
+
+  table{
+      width: 100%;
+      
+
+  }
+
+  table, th, td{
+      border: 1px solid white;
+      border-collapse: collapse;
+      padding:0.2em 1em ;
+
+  }
+
+  .playersY{
+      background-color: rgba(58, 150, 85, 0.801);
+  }
+
+  .playersN{
+    background-color: rgba(248, 89, 89, 0.795);
+}
+
+.players{
+    background-color: #8766d4c5;
+}
