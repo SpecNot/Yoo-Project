@@ -224,4 +224,8 @@ input:focus {
     margin-bottom: 10%;
     width: 90%;
   }
+
+  h3{
+    font-size: 32px;
+  }
 }
