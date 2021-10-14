@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
 
 
-  </head>
-  <body>
-    <div class="logo-animation"> 
-    <lottie-player  src="./animation1.json"  background="#000000"  speed="1"  autoplay></lottie-player>
-    <button id="start">START</button>
-    <button id="stop">STOP</button>
+</head>
+
+<body>
+  <div class="logo-animation">
+    <lottie-player src="./animation1.json" background="#000000" speed="1" autoplay></lottie-player>
 
   </div>
 
-    <form>
-        <div>
+  <div id="playing">
+    <h3>Thanks for Letting Us Know!</h3>
+    <h3>See You There!</h3>
+  </div>
 
-          <input class="ipt" type="text" name="text" >
-          <button id="ipt-button">
-            <svg id="ipt-button-svg" width="37" height="31" viewBox="0 0 37 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 1L35 15.5M35 15.5L21 30M35 15.5H0" stroke="white" stroke-width="2"/>
-              </svg>              
-         </button>
-        </div>
+  <div id="not-playing">
+    <h3>Thanks for Letting Us Know!</h3>
+    <h3>Have a Nice Day!</h3>
+  </div>
+
+  <div id="dietary">
+    <h3>Dietary Requirements?</h3>
+    <form method="post" >
+      <input id="dietry-ipt" class="dietry-ipt" type="text" width="500" name="text">
+      <br>
+      <br>
+      <button class="player-button" id="button-diet-sbmit"> Submit</button>
+      <button class="player-button" id="button-diet-no"> No</button>
+    </form>
+  </div>
+
+
+  <div id="player-data">
+    <div id="player-name">
+    </div>
+    <div id="player-details">
+    </div>
+    <div id="player-status">
+    </div>
+    <div id="player-buttons">
+
+      <button class="player-button" id="button-yes">Yes</button>
+      <button class="player-button" id="button-no">No</button>
+
+    </div>
+  </div>
+
+  <div id="main-section">
+    <div id="enter-form">
+      <form method="post" onsubmit="submitForm(event)">
+        <input id="ipt" class="ipt" type="text" name="text">
+        <button id="ipt-button">
+          <svg id="ipt-button-svg" width="37" height="31" viewBox="0 0 37 31" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 1L35 15.5M35 15.5L21 30M35 15.5H0" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
       </form>
-      <script src="sketch.js"></script>
-  </body>
-</html>
+    </div>
 
+    <div id="notification">
+      <h2>Code Invalid</h2>
+    </div>
+    
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="sketch.js"></script>
+</body>
+
+</html>
