@@ -205,7 +205,7 @@ input:focus {
 
 
 /* MEDIA QUERY FOR MOBILE DEVICES **********/    
-@media (max-width: 767px) {
+@media (max-width: 900px) {
   lottie-player {
     margin: 0 auto;
     margin-top: 20%;
