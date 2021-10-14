@@ -62,7 +62,7 @@ const getData = async () => {
         if(value["status"] == "none"){
             tableRow = document.createElement("tr");
             TableDataName = document.createElement("td");
-            TableDataName.innerHTML = value["name"]
+            TableDataName.innerHTML = value["name"].split('_').join(' ');
             TableDataStatus = document.createElement("td");
             TableDataStatus.innerHTML = "Not Responded"
             TableDataDietary = document.createElement("td");
@@ -85,7 +85,7 @@ const getData = async () => {
         else if(value["status"] == "Yes"){
             tableRow = document.createElement("tr");
             TableDataName = document.createElement("td");
-            TableDataName.innerHTML = value["name"]
+            TableDataName.innerHTML = value["name"].split('_').join(' ');
             TableDataStatus = document.createElement("td");
             TableDataStatus.innerHTML = "Going"
             TableDataDietary = document.createElement("td");
@@ -107,7 +107,7 @@ const getData = async () => {
         else if(value["status"] == "No"){
             tableRow = document.createElement("tr");
             TableDataName = document.createElement("td");
-            TableDataName.innerHTML = value["name"]
+            TableDataName.innerHTML = value["name"].split('_').join(' ');
             TableDataStatus = document.createElement("td");
             TableDataStatus.innerHTML = "Not Going"
             TableDataDietary = document.createElement("td");
