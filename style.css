@@ -205,7 +205,7 @@ input:focus {
 
 
 /* MEDIA QUERY FOR MOBILE DEVICES **********/    
-@media (max-width: 1200px) {
+/* @media (max-width: 600px) {
   lottie-player {
     margin: 0 auto;
     margin-top: 20%;
@@ -214,4 +214,14 @@ input:focus {
   }
 
 
+} */
+
+@media (pointer:none), (pointer:coarse) {
+
+  lottie-player {
+    margin: 0 auto;
+    margin-top: 40%;
+    margin-bottom: 10%;
+    width: 90%;
+  }
 }
