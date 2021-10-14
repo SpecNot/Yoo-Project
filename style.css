@@ -19,8 +19,9 @@ canvas {
 
 lottie-player {
   margin: 0 auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
   width: 500px;
-  height: 500px;
 }
 
 input {
@@ -179,8 +180,14 @@ input:focus {
 #dietary{
   /* visibility: hidden; */
   opacity: 0;
+  transition: opacity 1s; 
+
 }
 
+#dietary.fade{
+  /* visibility: hidden; */
+  opacity: 0;
+}
 
 #playing{
   /* visibility: hidden; */
@@ -190,3 +197,10 @@ input:focus {
   /* visibility: hidden; */
   opacity: 0;
 }
+
+
+#dietry-ipt{
+  width: 500px;
+}
+
+

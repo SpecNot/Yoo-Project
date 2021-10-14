@@ -66,6 +66,7 @@ const IDSent = async (message) => {
         hideSection.style.display = "hidden"
 
         setTimeout(function () {
+            document.querySelector("#main-section").style.display = "none"
             playerName = document.createElement("h3");
             playerName.innerHTML = myJson["name"]
             document.querySelector("#player-name").appendChild(playerName)
@@ -188,7 +189,7 @@ let yesButton = document.querySelector("#button-yes");
 let noButton = document.querySelector("#button-no");
 
 yesButton.onclick = function () {
-
+    document.querySelector("#ipt").style.display = "none";
     playerSection = document.querySelector("#player-data");
 
     playerSection.classList.remove("elementToFadeIn");
@@ -226,11 +227,15 @@ let dietNo = document.querySelector("#button-diet-no");
 dietYes.onclick = function (event) {
     event.preventDefault();
     dietaryReq = document.getElementById("dietry-ipt").value;
-    console.log("test")
-    dietSection.classList.remove("elementToFadeIn");
+    // console.log("test")
+    dietSection.classList.remove("elementToFadeInD");
     dietSection.classList.add("elementToFadeOuttwo");
-    dietY(dietaryReq)
-    
+    dietY(dietaryReq);
+    setTimeout(function () {    
+        playing = document.querySelector("#playing")
+        playing.style.display = "block"
+        playing.classList.add("elementToFadeInD");
+    }, 2000);
 
 
 
@@ -240,5 +245,11 @@ dietYes.onclick = function (event) {
 dietNo.onclick = function (event) {
     event.preventDefault();
     dietN()
-
+    dietSection.classList.remove("elementToFadeInD");
+    dietSection.classList.add("elementToFadeOuttwo");
+    setTimeout(function () {    
+        playing = document.querySelector("#playing")
+        playing.style.display = "block"
+        playing.classList.add("elementToFadeInD");
+    }, 2000);
 };
