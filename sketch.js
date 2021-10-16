@@ -25,10 +25,20 @@ setTimeout(function () {
 }, 5000);
 let msgID
 
+let firstTime = true;
+
 function submitForm(event) {
     event.preventDefault();
-    msgID = document.getElementById("ipt").value;
-    gotData = IDSent(msgID)
+    if (firstTime == true){
+        firstTime = false
+        msgID = document.getElementById("ipt").value;
+        gotData = IDSent(msgID)
+    }
+    else{
+
+    }
+
+
 
 
 }
@@ -52,6 +62,7 @@ const IDSent = async (message) => {
     // return myJson
 
     if (myJson == false) {
+        firstTime = true
         notif = document.querySelector("#notification");
         notif.classList.add("elementToFadeInOut");
         setTimeout(function () {
